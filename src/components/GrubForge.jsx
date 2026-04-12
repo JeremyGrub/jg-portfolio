@@ -71,10 +71,21 @@ export default function GrubForge() {
               LLC — Est. 2026
             </span>
           </div>
-          <p className="text-forge-muted text-lg max-w-2xl mb-16 leading-relaxed">
+          <p className="text-forge-muted text-lg max-w-2xl mb-6 leading-relaxed">
             My vehicle for turning ideas into real software. Grüb Forge is where passion projects
             become live products — built, shipped, and maintained by me.
           </p>
+          <a
+            href="https://grubforge.com"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 text-forge-orange font-mono text-sm hover:underline mb-16"
+          >
+            grubforge.com
+            <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M7 17L17 7M17 7H7M17 7v10" />
+            </svg>
+          </a>
         </FadeIn>
 
         {/* Product Cards */}
