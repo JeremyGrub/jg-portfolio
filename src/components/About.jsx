@@ -61,7 +61,7 @@ export default function About() {
             </FadeIn>
             <FadeIn delay={0.3}>
               <p className="text-forge-muted text-lg leading-relaxed">
-                Today I'm a <span className="text-forge-text font-semibold">Software Engineer II at IDEMIA</span>,
+                Most recently I was a <span className="text-forge-text font-semibold">Software Engineer II at IDEMIA</span>,
                 building secure biometric identification systems used by law enforcement agencies — a
                 full-circle intersection of both worlds. Outside of work, I run{' '}
                 <span className="text-forge-orange font-semibold">Grüb Forge LLC</span>, turning
@@ -89,7 +89,7 @@ export default function About() {
             <FadeIn delay={0.3}>
               <div className="bg-forge-card border border-forge-border rounded-xl p-6">
                 <div className="font-mono text-xs text-forge-orange tracking-widest uppercase mb-3">
-                  Current Stack
+                  Technologies
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {['JavaScript', 'React', 'Java', 'Spring Boot', 'Node.js', 'PostgreSQL', 'Linux', 'REST APIs'].map((tag) => (
