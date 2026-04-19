@@ -42,10 +42,10 @@ const projects = [
   },
   {
     title: 'DM Finder',
-    subtitle: 'TTRPG Matchmaking Platform',
+    subtitle: 'D&D Dungeon Master Matchmaking Platform',
     description:
-      'A platform that connects tabletop RPG players with the perfect Dungeon Master. Built out of a genuine passion for the TTRPG community with a clean discovery and matchmaking experience.',
-    tech: ['React', 'Node.js', 'PostgreSQL'],
+      'Full-stack matchmaking platform connecting tabletop RPG players with Dungeon Masters. Features advanced filtering, rich DM profiles, a real-time messaging system, full booking and scheduling flows, Stripe payments with authorize-now/capture-later, saved cards for recurring sessions, Stripe Connect payouts, email verification and transactional notifications via Resend, and an admin dashboard for platform management.',
+    tech: ['React', 'TypeScript', 'Node.js', 'Express', 'SQLite', 'Stripe', 'JWT', 'Resend', 'Tailwind CSS', 'Vite', 'Railway'],
     liveUrl: 'https://dmfinder.io',
     githubUrl: null,
     badge: 'Grüb Forge',
