@@ -19,6 +19,17 @@ function FadeIn({ children, delay = 0, className = '' }) {
 
 const projects = [
   {
+    title: 'Thru',
+    subtitle: 'Live Golf Scoring Platform',
+    description:
+      'A host sets up a tournament in minutes, texts each player a tokenized link, and a public leaderboard updates in real time as scores roll in — hole by hole, no apps, no accounts for players. Features an offline score queue that flushes on reconnect and a Three.js hero on the landing page.',
+    tech: ['Next.js', 'React', 'TypeScript', 'Supabase', 'Tailwind CSS', 'Three.js', 'GSAP'],
+    liveUrl: 'https://thru.golf',
+    githubUrl: null,
+    badge: 'Grüb Forge',
+    highlight: 'Live product',
+  },
+  {
     title: 'Latent Lab Academy',
     subtitle: 'Forensic Education Platform',
     description:

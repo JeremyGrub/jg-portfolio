@@ -17,27 +17,10 @@ function FadeIn({ children, delay = 0, className = '' }) {
   )
 }
 
-const products = [
-  {
-    name: 'Latent Lab Academy',
-    url: 'https://latentlabacademy.com',
-    badge: 'Live',
-    description:
-      'An interactive forensic education platform built for learning latent fingerprint analysis. Features side-by-side comparison tools, interactive canvas minutiae marking with Fabric.js, and dynamic subject datasets — currently used in a high school forensics class.',
-    tech: ['React', 'Fabric.js', 'JavaScript'],
-    icon: '🔬',
-    accent: '#f97316',
-  },
-  {
-    name: 'DM Finder',
-    url: 'https://dmfinder.io',
-    badge: 'Live',
-    description:
-      'A matchmaking platform connecting tabletop RPG players with Dungeon Masters. Built for the TTRPG community to find the right DM for their campaign style, experience level, and schedule.',
-    tech: ['React', 'Node.js', 'PostgreSQL'],
-    icon: '🎲',
-    accent: '#f97316',
-  },
+const stats = [
+  { value: '3', label: 'Live Products' },
+  { value: '2026', label: 'Founded' },
+  { value: '∞', label: 'Ideas in the Queue' },
 ]
 
 export default function GrubForge() {
@@ -55,81 +38,70 @@ export default function GrubForge() {
           </span>
         </FadeIn>
 
-        {/* Logo / Brand Block */}
-        <FadeIn delay={0.1}>
-          <div className="flex flex-col md:flex-row md:items-end gap-6 mb-6">
-            <div>
-              <h2 className="text-5xl md:text-6xl font-black tracking-wider leading-none">
-                <span className="text-forge-text">GR</span>
-                <span className="text-forge-text">Ü</span>
-                <span className="text-forge-text">B </span>
-                <span className="text-gradient">FORGE</span>
-              </h2>
-            </div>
-            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-forge-orange text-forge-orange text-xs font-mono tracking-widest mb-1">
-              <span className="w-1.5 h-1.5 rounded-full bg-forge-orange animate-pulse" />
-              LLC — Est. 2026
-            </span>
-          </div>
-          <p className="text-forge-muted text-lg max-w-2xl mb-6 leading-relaxed">
-            My vehicle for turning ideas into real software. Grüb Forge is where passion projects
-            become live products — built, shipped, and maintained by me.
-          </p>
-          <a
-            href="https://grubforge.com"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-2 text-forge-orange font-mono text-sm hover:underline mb-16"
-          >
-            grubforge.com
-            <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M7 17L17 7M17 7H7M17 7v10" />
-            </svg>
-          </a>
-        </FadeIn>
-
-        {/* Product Cards */}
-        <div className="grid md:grid-cols-2 gap-6">
-          {products.map((product, i) => (
-            <FadeIn key={product.name} delay={0.15 * (i + 1)}>
-              <motion.a
-                href={product.url}
+        <div className="grid md:grid-cols-2 gap-16 items-center">
+          {/* Left: Brand */}
+          <div>
+            <FadeIn delay={0.1}>
+              <div className="flex flex-col gap-4 mb-6">
+                <h2 className="text-5xl md:text-6xl font-black tracking-wider leading-none">
+                  <span className="text-forge-text">GR</span>
+                  <span className="text-forge-text">Ü</span>
+                  <span className="text-forge-text">B </span>
+                  <span className="text-gradient">FORGE</span>
+                </h2>
+                <span className="inline-flex items-center gap-2 w-fit px-3 py-1 rounded-full border border-forge-orange text-forge-orange text-xs font-mono tracking-widest">
+                  <span className="w-1.5 h-1.5 rounded-full bg-forge-orange animate-pulse" />
+                  LLC — Est. 2026
+                </span>
+              </div>
+              <p className="text-forge-muted text-lg leading-relaxed mb-6">
+                My LLC for turning ideas into real software. Grüb Forge is where passion
+                projects become live products — built, shipped, and maintained by me.
+                Every project under the Grüb Forge banner starts as something I genuinely
+                wanted to exist in the world.
+              </p>
+              <a
+                href="https://grubforge.com"
                 target="_blank"
                 rel="noreferrer"
-                whileHover={{ y: -4 }}
-                transition={{ duration: 0.2 }}
-                className="block bg-forge-card border border-forge-border rounded-2xl p-8 hover:border-forge-orange group transition-colors duration-300 glow-orange-sm hover:glow-orange"
+                className="inline-flex items-center gap-2 text-forge-orange font-mono text-sm hover:underline"
               >
-                <div className="flex items-start justify-between mb-6">
-                  <div className="text-4xl">{product.icon}</div>
-                  <div className="flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                    <span className="text-green-500 text-xs font-mono tracking-widest">{product.badge}</span>
-                  </div>
-                </div>
-
-                <h3 className="text-xl font-bold text-forge-text mb-3 group-hover:text-forge-orange transition-colors">
-                  {product.name}
-                </h3>
-                <p className="text-forge-muted text-sm leading-relaxed mb-6">
-                  {product.description}
-                </p>
-
-                <div className="flex items-center justify-between">
-                  <div className="flex flex-wrap gap-2">
-                    {product.tech.map((t) => (
-                      <span key={t} className="px-2.5 py-1 rounded-md bg-forge-surface border border-forge-border text-forge-muted text-xs font-mono">
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-                  <svg className="w-5 h-5 text-forge-muted group-hover:text-forge-orange group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M7 17L17 7M17 7H7M17 7v10" />
-                  </svg>
-                </div>
-              </motion.a>
+                grubforge.com
+                <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M7 17L17 7M17 7H7M17 7v10" />
+                </svg>
+              </a>
             </FadeIn>
-          ))}
+          </div>
+
+          {/* Right: Stats + note */}
+          <div className="space-y-6">
+            <FadeIn delay={0.2}>
+              <div className="grid grid-cols-3 gap-4">
+                {stats.map((stat) => (
+                  <div
+                    key={stat.label}
+                    className="bg-forge-card border border-forge-border rounded-xl p-5 text-center hover:border-forge-orange transition-colors duration-300"
+                  >
+                    <div className="text-3xl font-black text-gradient mb-1">{stat.value}</div>
+                    <div className="text-xs text-forge-muted font-mono uppercase tracking-widest leading-tight">{stat.label}</div>
+                  </div>
+                ))}
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={0.3}>
+              <div className="bg-forge-card border border-forge-border rounded-xl p-6">
+                <div className="font-mono text-xs text-forge-orange tracking-widest uppercase mb-3">Mission</div>
+                <p className="text-forge-muted text-sm leading-relaxed">
+                  Ship software that solves real problems — whether that's helping students
+                  learn forensic science, connecting TTRPG communities, or making Saturday
+                  golf tournaments more fun. If it's useful and I can build it, it goes
+                  under the Forge.
+                </p>
+              </div>
+            </FadeIn>
+          </div>
         </div>
       </div>
     </section>
